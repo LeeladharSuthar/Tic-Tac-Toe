@@ -13,9 +13,8 @@ export default function Board() {
         next == "X" ? setNext("O") : setNext("X");
     }
     function reset(){
+        setSquares(Array(9).fill(null));
         setNext("X");
-        nextSquares = squares.fill(null);
-        setSquares(nextSquares);
     }
 
     const winner = calculateWinner(squares);
